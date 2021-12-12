@@ -5,6 +5,8 @@ Directory:
 	|
 	|--masking.py
 	|
+	|--augment.py
+	|
 	|--vbl.ipynb
 	
 Requirements:
@@ -19,9 +21,9 @@ Requirements:
 	re
 
 Before you start you need to have Images(contains .png file) and Labels(contain .json file) directory.
+To augment data you can run augment.py, it will save images rotated by 90°, 180° and 270°.
 
 After installing all packages and libraries mentioned in requirements:
-
 1. Run masking.py to create mask images. 
 	-Enter path of Images(containg .png), Label(containg .json) and Mask where masked images wil be
 	stored. 
