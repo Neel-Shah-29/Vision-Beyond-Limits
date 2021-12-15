@@ -5,8 +5,13 @@
 We implemented a multi-class classification approach for disaster assessment from the given data set of post earthquake satellite imagery. The idea was to classify the different damage types in an image.
 
 ## Table Of Content
-* [Introduction](#Introduction)
-* [Approach](#Approach)
+* [Introduction](#introduction)
+* [File-Structure](#file-structure)
+* [Pre-Requisites](#pre-requisites)
+* [Approach](#approach)
+  * [Convolutional Neural Networks](#convolutional-neural-networks)
+  * [Multi-Class classification](#multi-class-classification)
+
 
 
 ## Introduction
@@ -20,10 +25,40 @@ The buildings are classified into 5 types .i.e:
 <p align="center"><img src ="https://user-images.githubusercontent.com/84843295/145777282-f9d16fd6-6abb-420a-9f55-61ae038cdf4e.png" /></p>
 We further need to assign their respective colours to the classified objects in the image. This data is then to be trained in our network and should give us the classification with colour-codes as given. This will require the concepts of deep learning and computer visions to be thoroughly applied.
 
+## File Structure
+
+
+
+
+## Pre-Requisites
+The following modules or packages/environment are required for running the code
+* Python v3 si required 
+  version: python==3.7.12
+* Libraries like Keras and tensorflow are also required for machine learning algorithms
+	```
+  pip install keras==2.7.0
+  ```
+  ```
+	pip install tensorflow==2.7.0
+  ```
+* Numpy and OpenCV are 2 very important libraries for image processing
+	```
+  pip install numpy==1.16.5
+	pip install opencv==4.1.2
+  ```
+* Matplotlib is used to plot graphs of accuracy and loss
+	```
+  pip install matplotlib==3.2.2
+  ```
+* Sklearn library is used for encoding the images and providing the classes with labels
+	```
+  pip install sklearn==1.0.1
+  ```
+
 ## Approach
 Good performance of deep learning algorithms is limited to the size of data available, and the network structure is considered. One of the most critical challenges for using a deep learning method for monitoring the buildings damaged in the disaster is that the training images of damaged targets are usually not very much. So models that can give considerably high accuracy compared to that of a regular model on a small dataset needed to be chosen.
 
-## Convolutional Neural Networks (CNN)
+## Convolutional Neural Networks
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/145997095-9b0b54ae-1153-4a17-948d-bea7ea077849.png" /></p>
 Convolutional neural networks are distinguished from other neural networks by their superior performance with image, speech, or audio signal inputs. They have three main types of layers, which are:
@@ -46,11 +81,14 @@ Multi-class classification is the classification technique that allows us to cat
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/145996084-7eb04eb1-9e4c-4b4e-880f-73cc8c7ab03b.png" /></p>
 
+<p align="center"><img src = "https://user-images.githubusercontent.com/84843295/146252435-cf5904d0-e76d-4d93-aeca-b5f590d31769.png" /></p>
+
+
 ## Team Members
-* NEEL SHAH		        
-* DHRUV KUNJADIYA           
-* ARNAV ZUTSHI
-* PRATHAM SHAH
+* [Neel Shah](https://github.com/Neel-Shah-29)		        
+* [Dhruv Kunjadiya](https://github.com/Dhruv454000)           
+* [Arnav Zutshi](https://github.com/shahpratham)
+* [Pratham Shah](https://github.com/shahpratham)
 
 ## Mentors
 * Aman Chhaparia
