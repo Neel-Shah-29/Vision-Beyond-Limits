@@ -175,6 +175,6 @@ Multi-class classification is the classification technique that allows us to cat
 * [Pratham Shah](https://github.com/shahpratham)
 
 ## Mentors
-* Aman Chhaparia
-* Prathamesh Tagore
-* Mann Shah
+* [Aman Chhaparia](https://github.com/amanchhaparia)
+* [Prathamesh Tagore](https://github.com/meshtag)
+* [Mann D0shi](https://github.com/MannDoshi)
