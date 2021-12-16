@@ -26,7 +26,91 @@ The buildings are classified into 5 types .i.e:
 We further need to assign their respective colours to the classified objects in the image. This data is then to be trained in our network and should give us the classification with colour-codes as given. This will require the concepts of deep learning and computer visions to be thoroughly applied.
 
 ## File Structure
+```
+📦Vision-Beyond-Limits-main
+ ┣ 📂Mask-20211120T183800Z-001
+ ┃ ┗ 📂Mask
+ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png
+ ┃ ┃ ┗ ...
+ ┣ 📂Output_classified_images
+ ┃ ┣ 📜Output_1.png
+ ┃ ┣ 📜Output_10.png
+ ┃ ┣ 📜Output_11.png
+ ┃ ┣ 📜Output_12.png
+ ┃ ┗ ...
+ ┣ 📂vbl_data
+ ┃ ┣ 📂augmented_data
+ ┃ ┃ ┣ 📂data_180
+ ┃ ┃ ┃ ┣ 📂images_180
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┃ ┃ ┗ 📂masks_180
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_180.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┃ ┣ 📂data_270
+ ┃ ┃ ┃ ┣ 📂images_270
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┃ ┃ ┗ 📂masks_270
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_270.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┃ ┗ 📂data_90
+ ┃ ┃ ┃ ┣ 📂images_90
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┃ ┃ ┗ 📂masks_90
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png_90.png
+ ┃ ┃ ┃ ┃ ┗ ...
+ ┃ ┣ 📂orginal_images
+ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png
+ ┃ ┃ ┗ ...
+ ┃ ┗ 📂original_mask
+ ┃ ┃ ┣ 📜mexico-earthquake_00000001_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000002_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000003_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000004_post_disaster.png
+ ┃ ┃ ┣ 📜mexico-earthquake_00000007_post_disaster.png
+ ┃ ┃ ┗ ...
+ ┣ 📜augment.py
+ ┣ 📜LICENSE
+ ┣ 📜masking.py
+ ┣ 📜Model.ipynb
+ ┣ 📜README.md
+ ┗ 📜README.txt
 
+```
 
 
 
