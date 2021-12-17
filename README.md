@@ -11,7 +11,8 @@ We implemented a multi-class classification approach for disaster assessment fro
 * [Approach](#approach)
   * [Convolutional Neural Networks](#convolutional-neural-networks)
   * [Multi-Class classification](#multi-class-classification)
-
+* [Contributors](#contributors)
+* [Acknowledgements and Resources](#acknowledgements-and-resources)
 
 
 ## Introduction
@@ -168,13 +169,13 @@ Multi-class classification is the classification technique that allows us to cat
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/146252435-cf5904d0-e76d-4d93-aeca-b5f590d31769.png" /></p>
 
 
-## Team Members
+## Contributors
 * [Neel Shah](https://github.com/Neel-Shah-29)		        
 * [Dhruv Kunjadiya](https://github.com/Dhruv454000)           
 * [Arnav Zutshi](https://github.com/shahpratham)
 * [Pratham Shah](https://github.com/shahpratham)
 
-## Mentors
+## Acknowledgements and Resources
 * [Aman Chhaparia](https://github.com/amanchhaparia)
 * [Prathamesh Tagore](https://github.com/meshtag)
 * [Mann Doshi](https://github.com/MannDoshi)
