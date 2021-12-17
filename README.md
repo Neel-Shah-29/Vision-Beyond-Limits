@@ -12,6 +12,7 @@ We implemented a multi-class classification approach for disaster assessment fro
   * [Convolutional Neural Networks](#convolutional-neural-networks)
   * [Multi-Class classification](#multi-class-classification)
 * [Contributors](#contributors)
+* [Results](#results)
 * [Acknowledgements and Resources](#acknowledgements-and-resources)
 
 
@@ -140,10 +141,10 @@ The following modules or packages/environment are required for running the code
   pip install sklearn==1.0.1
   ```
 
-## Approach
+## Theory
 Good performance of deep learning algorithms is limited to the size of data available, and the network structure is considered. One of the most critical challenges for using a deep learning method for monitoring the buildings damaged in the disaster is that the training images of damaged targets are usually not very much. So models that can give considerably high accuracy compared to that of a regular model on a small dataset needed to be chosen.
 
-## Convolutional Neural Networks
+### Convolutional Neural Networks
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/145997095-9b0b54ae-1153-4a17-948d-bea7ea077849.png" /></p>
 Convolutional neural networks are distinguished from other neural networks by their superior performance with image, speech, or audio signal inputs. They have three main types of layers, which are:
@@ -157,7 +158,7 @@ We have used <b>U-Net</b> model which is convolutional network architecture for 
 <h3>U-Net</h3>
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/145995165-ee2b07b5-55d1-406b-92cd-6786dfefa05e.png" /></p>
 
-## Multi-Class Classification
+### Multi-Class Classification
 When we solve a classification problem having only two class labels, then it becomes easy for us to filter the data, apply any classification algorithm, train the model with filtered data, and predict the outcomes. But when we have more than two class instances in input train data, then it might get complex to analyze the data, train the model, and predict relatively accurate results. To handle these multiple class instances, we use multi-class classification.
 Multi-class classification is the classification technique that allows us to categorize the test data into multiple class labels present in trained data as a model prediction.There are mainly two types of multi-class classification techniques:-
 
@@ -168,6 +169,31 @@ Multi-class classification is the classification technique that allows us to cat
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/146252435-cf5904d0-e76d-4d93-aeca-b5f590d31769.png" /></p>
 
+## Approach
+
+We tired solving this problems in 5 steps:
+
+- **Get mask**
+
+First we need to get mask ready. To do that, we have used skimage and matplotlib libraires on our JSON data to from multi-label masking which will used for traing the model for damage detection.
+
+- **Define model**
+
+We defined Unet model which takes `n_classes`, `IMG_HEIGHT`, `IMG_WIDTH`, `IMG_CHANNELS` as argument. We have used `softmax` as activation function as in our case its multi-class classification.
+
+- **Encode data**
+
+Now we will encode our labels using `LabelEncoder` from sklearn. Encoder add values from 0-5 (as we have 6 classes) to our label. Further split our data set into train image and test image in 9:1 ratio.
+
+- **Train model**
+
+Next, we complied the model using `Adam` , optimizer, `focal-loss`  as loss function and `accuracy` metric and used sample weights as data was imbalanced. We tried different things while training the model like changing the number of epochs , changing the weights that we have defined , also we have changed the image size to see if there is any change in the accuracy or not.
+
+- **Test model**
+
+After training the model we saved the model to use it while testing. Finally we are ready to test our model, plot accuracy and loss graph and get our values of `IoU`, `Precison` and `Recall`. You can check the results that we got in [Results](#results) section.
+
+## Results
 
 ## Contributors
 * [Neel Shah](https://github.com/Neel-Shah-29)		        
