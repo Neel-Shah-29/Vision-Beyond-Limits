@@ -11,6 +11,8 @@ We implemented a multi-class classification approach for disaster assessment fro
 * [Approach](#approach)
   * [Convolutional Neural Networks](#convolutional-neural-networks)
   * [Multi-Class classification](#multi-class-classification)
+* [Future-Work](#future-work)
+* [Trouble-Shooting](#trouble-shooting)
 * [Contributors](#contributors)
 * [Results](#results)
 * [Acknowledgements and Resources](#acknowledgements-and-resources)
@@ -218,6 +220,15 @@ Next, we complied the model using `Adam` , optimizer, `focal-loss`  as loss fun
 - **Test model**
 
 After training the model we saved the model to use it while testing. Finally we are ready to test our model, plot accuracy and loss graph and get our values of `IoU`, `Precison` and `Recall`. You can check the results that we got in [Results](#results) section.
+
+## Future Work
+* We would like to improve accuracy of our model and test our model on bigger datasets.
+* We can use better approaches to handle skewed data set.
+* We can use Data loader to train our model on more no of epochs.
+
+## Trouble Shooting
+* while working on google colab we faced many errors due to tensorflow versions, solution to this would be to see the requirements of model properly and accordingly install the required versions.
+* while defining class weights it should be converted into a dictionary with your labels as key and associated weight as value to avoid any errors.
 
 ## Results
 
