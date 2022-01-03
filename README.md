@@ -169,6 +169,32 @@ Multi-class classification is the classification technique that allows us to cat
 
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/146252435-cf5904d0-e76d-4d93-aeca-b5f590d31769.png" /></p>
 
+### Optimiser : 
+* Adam Optimiser:
+  
+  Adam optimizer involves a combination of two gradient descent methodologies: 
+
+   **Momentum**:
+
+   This algorithm is used to accelerate the gradient descent algorithm by taking into consideration the ‘exponentially weighted average’ of the gradients. Using averages makes the algorithm converge towards the minima in a faster pace. 
+
+   **Root Mean Square Propagation (RMSP)**:
+
+   Root mean square prop or RMSprop is an adaptive learning algorithm that tries to improve AdaGrad. Instead of taking the cumulative sum of squared gradients like in AdaGrad,      it takes the ‘exponential moving average’.
+   Adam Optimizer inherits the strengths or the positive attributes of the above two methods and builds upon them to give a more optimized gradient descent. 
+   <p align="center"><img src="https://user-images.githubusercontent.com/84740927/147948030-d5ee00a2-4731-458a-8273-4771a5fa5bae.png" width="500"></p>
+ 
+### Loss functions : 
+* Focal Loss: 
+By using Focal Loss we can  reduce the imbalance in the dataset. We have tried focal loss as a loss function in our problem as the classes were highly imbalanced, focal loss can be useful in such cases.
+<p align="center"><img src = "https://user-images.githubusercontent.com/84740927/147949934-6f3b0e33-13b8-4a25-a6b8-926389b837ff.png" width="500" /></p>
+
+
+* Categorical_crossentropy:
+Categorical cross entropy is a loss function that is used in multi-class classification tasks. These are tasks where an example can only belohttps://user-images.githubusercontent.com/84740927/147950518-d6b03f7a-56e2-41f2-9032-e39e9f45f20c.pngng to one out of many possible categories, and the model must decide which one.Our problem was on a similar basis so we tried it.
+<p align="center"><img src = "https://user-images.githubusercontent.com/84740927/147950518-d6b03f7a-56e2-41f2-9032-e39e9f45f20c.png" width="500" /></p>
+
+
 ## Approach
 
 We tired solving this problems in 5 steps:
