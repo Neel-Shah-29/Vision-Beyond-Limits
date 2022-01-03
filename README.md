@@ -229,6 +229,7 @@ After training the model we saved the model to use it while testing. Finally we 
 ## Trouble Shooting
 * while working on google colab we faced many errors due to tensorflow versions, solution to this would be to see the requirements of model properly and accordingly install the required versions.
 * while defining class weights it should be converted into a dictionary with your labels as key and associated weight as value to avoid any errors.
+* other syntax errors were solved with help of google.
 
 ## Results
 
