@@ -260,10 +260,9 @@ After training the model we saved the model to use it while testing. Finally we 
 
 
 ## Results
-![image](https://user-images.githubusercontent.com/84843295/148251988-997881eb-3182-4d1f-898f-bcbd810f9a48.png)
-![image](https://user-images.githubusercontent.com/84843295/148252496-1295c48c-0f1d-40c0-b889-7004f310b717.png)
-![image](https://user-images.githubusercontent.com/84843295/148252864-7a0b336f-a0a1-42a6-901b-35b0dc106905.png)
-
+![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_2.png)
+![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_1.png)
+![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_9.png)
 
 ## Future Work
 * We would like to improve accuracy of our model and test our model on bigger datasets.
