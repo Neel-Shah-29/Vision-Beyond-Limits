@@ -14,7 +14,7 @@ We implemented a multi-class classification approach for disaster assessment fro
 * [Theory](#theory)
   * [Convolutional Neural Networks](#convolutional-neural-networks)
   * [Multi-Class classification](#multi-class-classification)
- * [Approach](#approach)
+  * [Approach](#approach)
 * [Future-Work](#future-work)
 * [Trouble-Shooting](#trouble-shooting)
 * [Contributors](#contributors)
@@ -254,7 +254,12 @@ Next, we complied the model using `Adam` , optimizer, `focal-loss`  as loss fun
 
 After training the model we saved the model to use it while testing. Finally we are ready to test our model, plot accuracy and loss graph and get our values of `IoU`, `Precison` and `Recall`. You can check the results that we got in [Results](#results) section.
 
+- **FlowChart**
+![Account ownership flow (1)](https://user-images.githubusercontent.com/84843295/148251566-788d490e-1d76-4fb2-8e0f-231f28b7cb10.png)
+
+
 ## Results
+
 
 ## Future Work
 * We would like to improve accuracy of our model and test our model on bigger datasets.
