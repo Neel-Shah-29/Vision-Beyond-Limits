@@ -123,29 +123,20 @@ We further need to assign their respective colours to the classified objects in 
 ## Getting Started
 ### Pre-Requisites
 The following modules or packages/environment are required for running the code
-* Python v3 si required 
-  version: python==3.7.12
-* Libraries like Keras and tensorflow are also required for machine learning algorithms
-  ```
-  pip install keras==2.7.0
-  ```
-  ```
-  pip install tensorflow==2.7.0
-  ```
-* Numpy and OpenCV are 2 very important libraries for image processing
-  ```
-  pip install numpy==1.16.5
-  pip install opencv==4.1.2
-  ```
-* Matplotlib is used to plot graphs of accuracy and loss
-  ```
-  pip install matplotlib==3.2.2
-  ```
-* Sklearn library is used for encoding the images and providing the classes with labels
-  ```
-  pip install sklearn==1.0.1
-  ```
+* Python v3 is required 
 
+* Libraries like Keras and tensorflow are also required for machine learning algorithms
+
+* Numpy and OpenCV are 2 very important libraries for image processing
+
+* Matplotlib is used to plot graphs of accuracy and loss
+
+* Sklearn library is used for encoding the images and providing the classes with labels
+
+Install:
+```
+pip install -r requirements.txt
+```
 
 ### Installation
 
