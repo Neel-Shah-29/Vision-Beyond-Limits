@@ -260,7 +260,6 @@ After training the model we saved the model to use it while testing. Finally we 
 
 
 ## Results
-![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_2.png)
 ![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_1.png)
 ![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_9.png)
 ![image](https://raw.githubusercontent.com/Neel-Shah-29/Vision-Beyond-Limits/main/Output_classified_images/Output_12.png)
