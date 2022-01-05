@@ -1,6 +1,4 @@
 <h1>VISION BEYOND LIMITS</h1>
-![image](https://user-images.githubusercontent.com/84843295/148252164-7385647f-80f9-4bc0-a843-3e4521bbcbf3.png)
-
 <p align="center"><img src ="https://user-images.githubusercontent.com/84843295/145776554-d2d61b46-f9ca-4f91-a75e-ed2dafe7170d.png" /></p>
 
 We implemented a multi-class classification approach for disaster assessment from the given data set of post earthquake satellite imagery. The idea was to classify the different damage types in an image.
