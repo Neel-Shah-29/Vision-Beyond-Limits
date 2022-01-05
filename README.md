@@ -7,10 +7,14 @@ We implemented a multi-class classification approach for disaster assessment fro
 ## Table Of Content
 * [Introduction](#introduction)
 * [File-Structure](#file-structure)
-* [Pre-Requisites](#pre-requisites)
-* [Approach](#approach)
+* [Getting Started](#getting-started)
+	* [Pre-Requisites](#pre-requisites)
+	*  [Installation](#installation)
+* [Usage](#usage)
+* [Theory](#theory)
   * [Convolutional Neural Networks](#convolutional-neural-networks)
   * [Multi-Class classification](#multi-class-classification)
+ * [Approach](#approach)
 * [Future-Work](#future-work)
 * [Trouble-Shooting](#trouble-shooting)
 * [Contributors](#contributors)
@@ -117,8 +121,8 @@ We further need to assign their respective colours to the classified objects in 
 ```
 
 
-
-## Pre-Requisites
+## Getting Started
+### Pre-Requisites
 The following modules or packages/environment are required for running the code
 * Python v3 si required 
   version: python==3.7.12
@@ -142,6 +146,35 @@ The following modules or packages/environment are required for running the code
   ```
   pip install sklearn==1.0.1
   ```
+
+
+### Installation
+
+1.  Clone the repo
+    
+    ```bash
+    git clone https://github.com/Neel-Shah-29/Vision-Beyond-Limits.git
+    ```
+    
+
+## Usage
+
+Before you start, you need to have two directories: Images(containing .png file) and Labels(containing .json file).
+> To augment data you can run `augment.py`, it will save images rotated by 90°, 180° and 270°.
+
+```
+cd /path/to/Vision-Beyond-Limits/
+```
+
+```
+python3 masking.py
+```
+
+> Modify correct path of Images(containg .png), Label(containg .json) and Mask where masked images wil be stored in ths code.
+
+ Open `vbl.ipynb` and run all cells in sequencial order.
+
+> Enter paths of images and masked images wherever specified.
 
 ## Theory
 Good performance of deep learning algorithms is limited to the size of data available, and the network structure is considered. One of the most critical challenges for using a deep learning method for monitoring the buildings damaged in the disaster is that the training images of damaged targets are usually not very much. So models that can give considerably high accuracy compared to that of a regular model on a small dataset needed to be chosen.
@@ -172,27 +205,27 @@ Multi-class classification is the classification technique that allows us to cat
 <p align="center"><img src = "https://user-images.githubusercontent.com/84843295/146252435-cf5904d0-e76d-4d93-aeca-b5f590d31769.png" /></p>
 
 ### Optimiser : 
-* Adam Optimiser:
+#### Adam Optimiser:
   
   Adam optimizer involves a combination of two gradient descent methodologies: 
 
-   **Momentum**:
+  * **Momentum**:
 
    This algorithm is used to accelerate the gradient descent algorithm by taking into consideration the ‘exponentially weighted average’ of the gradients. Using averages makes the algorithm converge towards the minima in a faster pace. 
 
-   **Root Mean Square Propagation (RMSP)**:
+ *  **Root Mean Square Propagation (RMSP)**:
 
    Root mean square prop or RMSprop is an adaptive learning algorithm that tries to improve AdaGrad. Instead of taking the cumulative sum of squared gradients like in AdaGrad,      it takes the ‘exponential moving average’.
    Adam Optimizer inherits the strengths or the positive attributes of the above two methods and builds upon them to give a more optimized gradient descent. 
    <p align="center"><img src="https://user-images.githubusercontent.com/84740927/147948030-d5ee00a2-4731-458a-8273-4771a5fa5bae.png" width="500"></p>
  
 ### Loss functions : 
-* Focal Loss: 
+* **Focal Loss:** 
 By using Focal Loss we can  reduce the imbalance in the dataset. We have tried focal loss as a loss function in our problem as the classes were highly imbalanced, focal loss can be useful in such cases.
 <p align="center"><img src = "https://user-images.githubusercontent.com/84740927/147949934-6f3b0e33-13b8-4a25-a6b8-926389b837ff.png" width="500" /></p>
 
 
-* Categorical_crossentropy:
+* **Categorical_crossentropy:**
 Categorical cross entropy is a loss function that is used in multi-class classification tasks. These are tasks where an example can only belohttps://user-images.githubusercontent.com/84740927/147950518-d6b03f7a-56e2-41f2-9032-e39e9f45f20c.pngng to one out of many possible categories, and the model must decide which one.Our problem was on a similar basis so we tried it.
 <p align="center"><img src = "https://user-images.githubusercontent.com/84740927/147950518-d6b03f7a-56e2-41f2-9032-e39e9f45f20c.png" width="500" /></p>
 
@@ -221,17 +254,17 @@ Next, we complied the model using `Adam` , optimizer, `focal-loss`  as loss fun
 
 After training the model we saved the model to use it while testing. Finally we are ready to test our model, plot accuracy and loss graph and get our values of `IoU`, `Precison` and `Recall`. You can check the results that we got in [Results](#results) section.
 
+## Results
+
 ## Future Work
 * We would like to improve accuracy of our model and test our model on bigger datasets.
 * We can use better approaches to handle skewed data set.
 * We can use Data loader to train our model on more no of epochs.
 
 ## Trouble Shooting
-* while working on google colab we faced many errors due to tensorflow versions, solution to this would be to see the requirements of model properly and accordingly install the required versions.
-* while defining class weights it should be converted into a dictionary with your labels as key and associated weight as value to avoid any errors.
-* other syntax errors were solved with help of google.
-
-## Results
+* While working on google colab we faced many errors due to tensorflow versions, solution to this would be to see the requirements of model properly and accordingly install the required versions.
+* While defining class weights it should be converted into a dictionary with your labels as key and associated weight as value to avoid any errors.
+* Other errors were solved with help of google.
 
 ## Contributors
 * [Neel Shah](https://github.com/Neel-Shah-29)		        
